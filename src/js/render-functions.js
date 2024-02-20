@@ -50,7 +50,8 @@ export function renderGallery(resultsArr) {
 export function loadMoreBtnShow(resultsArr) {
   const totalHits = resultsArr.totalHits;
   const maxPage = Math.ceil(totalHits / 15);
-  if (page < maxPage) {
+  // const resultsNum = ();
+  if (page < maxPage && totalHits !== 0) {
     refs.loadMoreBtn.classList.remove('isHidden');
   } else {
     refs.loadMoreBtn.classList.add('isHidden');

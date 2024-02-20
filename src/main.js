@@ -38,6 +38,7 @@ refs.searchForm.addEventListener('submit', e => {
 
 refs.loadMoreBtn.addEventListener('click', () => {
   page += 1;
+  refs.loadMoreBtn.classList.add('isHidden');
   refs.loader.classList.remove('isHidden');
   searchPicture(searchRequest, page)
     .then(data => {
@@ -62,7 +63,7 @@ export function loadMoreBtnShow(resultsArr) {
       message: "We're sorry, but you've reached<br>the end of search results.",
       color: 'blue',
       messageColor: '#001',
-      backgroundColor: '#FFF',
+      backgroundColor: '#6c8cff',
       messageSize: '16',
       position: 'topRight',
       iconUrl: stopIcon,

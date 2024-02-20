@@ -51,28 +51,25 @@ refs.loadMoreBtn.addEventListener('click', () => {
   // console.log(page);
 });
 
-// export function loadMoreBtnShow(resultsArr) {
-//   const totalHits = resultsArr.totalHits;
-//   const maxPage = Math.ceil(totalHits / 15);
-//   // const resultsNum = ();
-//   console.log('maxPage', maxPage);
-//   console.log('totalHits', totalHits);
-//   if (page < maxPage) {
-//     refs.loadMoreBtn.classList.remove('isHidden');
-//   } else {
-//     refs.loadMoreBtn.classList.add('isHidden');
-//     iziToast.show({
-//       message: "We're sorry, but you've reached<br>the end of search results.",
-//       color: 'blue',
-//       messageColor: '#001',
-//       backgroundColor: '#FFF',
-//       messageSize: '16',
-//       position: 'topRight',
-//       iconUrl: stopIcon,
-//       messageLineHeight: '24',
-//       closeOnClick: 'true',
-//       close: 'false',
-//       transitionIn: 'fadeInLeft',
-//     });
-//   }
-// }
+export function loadMoreBtnShow(resultsArr) {
+  const totalHits = resultsArr.totalHits;
+  const maxPage = Math.ceil(totalHits / 15);
+  if (page < maxPage) {
+    refs.loadMoreBtn.classList.remove('isHidden');
+  } else {
+    refs.loadMoreBtn.classList.add('isHidden');
+    iziToast.show({
+      message: "We're sorry, but you've reached<br>the end of search results.",
+      color: 'blue',
+      messageColor: '#001',
+      backgroundColor: '#FFF',
+      messageSize: '16',
+      position: 'topRight',
+      iconUrl: stopIcon,
+      messageLineHeight: '24',
+      closeOnClick: 'true',
+      close: 'false',
+      transitionIn: 'fadeInLeft',
+    });
+  }
+}

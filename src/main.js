@@ -38,6 +38,7 @@ refs.searchForm.addEventListener('submit', e => {
 
 refs.loadMoreBtn.addEventListener('click', () => {
   page += 1;
+  refs.loader.classList.remove('isHidden');
   searchPicture(searchRequest, page)
     .then(data => {
       galleryTemplate(data);

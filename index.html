@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-12/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>goit-js-hw-11</title>
+    
+    <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-da186403.js">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/vendor-a51daae5.css">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/index-5a31f549.css">
+  </head>
+  <body>
+    <section class="gallery-section">
+      <form class="js-search-form">
+        <input
+          type="text"
+          class="form-input"
+          name="query"
+          placeholder="Search images..."
+        />
+        <button type="submit">Search</button>
+      </form>
+      <div>
+        <ul class="gallery js-gallery"></ul>
+        <div class="container">
+          <button type="button" class="load-more-btn isHidden">
+            Load more
+          </button>
+          <span class="loader isHidden"></span>
+        </div>
+      </div>
+    </section>
+    
+  </body>
+</html>

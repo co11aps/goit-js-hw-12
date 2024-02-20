@@ -1,7 +1,6 @@
 import searchPicture from './js/pixabay-api.js';
 import { galleryTemplate, renderGallery } from './js/render-functions.js';
 import { refs } from './js/refs.js';
-// import { loadMoreBtnShow } from './js/render-functions.js';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import stopIcon from './img/stop-icon.svg';
@@ -16,7 +15,6 @@ refs.searchForm.addEventListener('submit', e => {
 
   if (searchTopic !== '') {
     searchRequest = searchTopic;
-    console.log(searchRequest);
     refs.loader.classList.remove('isHidden');
     refs.gallery.innerHTML = '';
     refs.loadMoreBtn.classList.add('isHidden');
@@ -26,7 +24,6 @@ refs.searchForm.addEventListener('submit', e => {
         galleryTemplate(data);
         renderGallery(data);
         refs.loader.classList.add('isHidden');
-        // loadMoreBtnShow(data);
       })
       .catch(error => {
         console.error(error);
@@ -80,6 +77,6 @@ function scrollPage() {
     const rect = document
       .querySelector('.gallery-item')
       .getBoundingClientRect();
-    window.scrollBy({ top: rect.height * 2, left: 0, behavior: 'smooth' });
+    window.scrollBy({ top: rect.height * 3, left: 0, behavior: 'smooth' });
   }
 }

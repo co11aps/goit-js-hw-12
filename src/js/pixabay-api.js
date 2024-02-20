@@ -14,6 +14,5 @@ export default async function searchPicture(userValue, page) {
       page: page,
     },
   });
-  console.log(response.data);
   return response.data;
 }

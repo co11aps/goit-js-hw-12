@@ -29,6 +29,7 @@ export function renderGallery(resultsArr) {
     const markup = galleryTemplate(resultsArr);
     refs.gallery.insertAdjacentHTML('beforeend', markup);
     lightbox.refresh();
+    loadMoreBtnShow(resultsArr);
   } else {
     iziToast.show({
       message:

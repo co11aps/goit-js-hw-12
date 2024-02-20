@@ -43,12 +43,11 @@ refs.loadMoreBtn.addEventListener('click', () => {
       galleryTemplate(data);
       renderGallery(data);
       refs.loader.classList.add('isHidden');
-      // loadMoreBtnShow(data);
+      scrollPage();
     })
     .catch(error => {
       console.error(error);
     });
-  // console.log(page);
 });
 
 export function loadMoreBtnShow(resultsArr) {
@@ -71,5 +70,14 @@ export function loadMoreBtnShow(resultsArr) {
       close: 'false',
       transitionIn: 'fadeInLeft',
     });
+  }
+}
+
+function scrollPage() {
+  if (page > 1) {
+    const rect = document
+      .querySelector('.gallery-item')
+      .getBoundingClientRect();
+    window.scrollBy({ top: rect.height * 2, left: 0, behavior: 'smooth' });
   }
 }
